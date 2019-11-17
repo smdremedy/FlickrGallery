@@ -14,7 +14,8 @@ Simple browser for Flicker images. Showcase of Modern Android Development.
  * Multi-module project
  * Kotlin Coroutines and Flow
  * Espresso tests
- * Android CI using Github Actions ![](https://github.com/smdremedy/FlickrGallery/workflows/.github/workflows/android.yml/badge.svg)
+ * Android CI using Github Actions ![](https://github.com/smdremedy/FlickrGallery/workflows/Android%20CI/badge.svg)
+
  
 ### Libs
 
