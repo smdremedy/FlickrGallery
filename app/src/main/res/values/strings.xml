@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Flickr Gallery</string>
+    <string name="sort_order">Sort order</string>
+    <string name="no_results_try_some_other_tags">No results. Try some other tags.</string>
+    <string name="connection_error">Connection error occurred: %s</string>
+    <string name="error">Error</string>
+    <string name="search_by_tags">Search by tags</string>
+    <string name="photo_details_title">Photo details</string>
+    <string name="sort_order_dialog_title">Select sort order</string>
+
+    <array name="sort_types">
+        <item>Order by Date Taken</item>
+        <item>Order by Date Published</item>
+    </array>
+</resources>

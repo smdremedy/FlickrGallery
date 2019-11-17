@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flickr_gallery_nav_graph"
+    app:startDestination="@id/gallery_fragment">
+
+    <fragment
+        android:id="@+id/gallery_fragment"
+        android:name="pl.szkoleniaandroid.flickrgallery.features.gallery.GalleryFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/gallery_fragment">
+        <action
+            android:id="@+id/show_details"
+            app:destination="@id/details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="pl.szkoleniaandroid.flickrgallery.features.details.PhotoDetailsFragment"
+        android:label="@string/photo_details_title"
+        tools:layout="@layout/photo_details_fragment">
+        <argument
+            android:name="photo"
+            app:argType="pl.szkoleniaandroid.flickrgallery.domain.model.Photo" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/sort_order_dialog"
+        android:name="pl.szkoleniaandroid.flickrgallery.features.gallery.SortOrderDialogFragment">
+        <argument
+            android:name="sort_order"
+            app:argType="pl.szkoleniaandroid.flickrgallery.features.gallery.SortOrder" />
+    </dialog>
+
+    <dialog
+        android:id="@+id/error_dialog"
+        android:name="pl.szkoleniaandroid.flickrgallery.utils.ErrorDialogFragment">
+        <argument
+            android:name="message"
+            app:argType="string" />
+    </dialog>
+    <action
+        android:id="@+id/show_sort_order_dialog"
+        app:destination="@id/sort_order_dialog" />
+    <action
+        android:id="@+id/show_error_dialog"
+        app:destination="@id/error_dialog" />
+</navigation>
